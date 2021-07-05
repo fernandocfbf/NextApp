@@ -15,7 +15,7 @@ export function SignIn() {
   const navigation = useNavigation()
 
   function handleSignIn() {
-    navigation.navigate('SignIn')
+    navigation.navigate('Home')
   }
 
   return (
@@ -31,13 +31,17 @@ export function SignIn() {
         </Text>
         <View style={styles.form}>
           <InputLogin
-            text={"email"} />
+            text={"email"}
+            password={false}
+          />
           <InputLogin
-            text={"password"} />
+            text={"password"}
+            password={true}
+          />
         </View>
         <TouchableOpacity
           style={styles.login}
-          onPress={() => console.log("press Login")}
+          onPress={handleSignIn}
           activeOpacity={0.6}
         >
           <Text style={styles.loginText}>
