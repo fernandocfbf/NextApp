@@ -6,11 +6,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
-
   },
   image: {
-    width: 250,
-    height: 250
+    width: 220,
+    height: 220
   },
   welcome: {
     fontSize: 34,

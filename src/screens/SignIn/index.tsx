@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native'
 import { styles } from './styles'
 import { useNavigation } from '@react-navigation/native'
 
@@ -7,9 +7,6 @@ import logoPng from '../../../assets/logo_login.png'
 
 import { Background } from '../../components/Background'
 import { InputLogin } from '../../components/InputLogin'
-
-
-
 
 export function SignIn() {
   const navigation = useNavigation()
@@ -20,7 +17,7 @@ export function SignIn() {
 
   return (
     <Background>
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Image
           style={styles.image}
           source={logoPng}
@@ -60,7 +57,7 @@ export function SignIn() {
         <Text style={styles.newUser}>
           Dont't have the password? Please ask your superiors
         </Text>
-      </View>
+      </SafeAreaView>
     </Background>
   )
 }
