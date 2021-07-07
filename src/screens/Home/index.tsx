@@ -9,6 +9,7 @@ import {
 
 import avatarPng from "../../../assets/golab.png"
 import { Background } from "../../components/Background";
+import { HomeDescription } from "../../components/HomeDescription";
 
 import { styles } from "./styles";
 import { ToolSelect } from '../../components/ToolSelect'
@@ -32,9 +33,8 @@ export function Home() {
             source={avatarPng}
           />
         </View>
+        <HomeDescription></HomeDescription>
         <ToolSelect></ToolSelect>
-
-
       </SafeAreaView>
     </Background>
   )

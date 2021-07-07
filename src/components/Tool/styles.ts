@@ -4,7 +4,7 @@ import { theme } from '../../global/styles/theme'
 export const styles = StyleSheet.create({
   container: {
     width: 150,
-    height: 150,
+    height: 125,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
 
   title: {
     color: theme.colors.white,
-    fontSize: 15,
+    fontSize: 16,
     marginTop: 8
   },
 })

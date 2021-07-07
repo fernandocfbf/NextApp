@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import { Home } from '../screens/Home'
 import { SignIn } from '../screens/SignIn'
+import { ArtificialIntelligence } from '../screens/ArtificialIntelligence'
 import { theme } from '../global/styles/theme'
 
 const { Navigator, Screen } = createStackNavigator()
@@ -21,9 +22,13 @@ export function AuthRoutes() {
         name="SignIn"
         component={SignIn}
       />
-       <Screen
+      <Screen
         name="Home"
         component={Home}
+      />
+      <Screen
+        name="ArtificialIntelligence"
+        component={ArtificialIntelligence}
       />
     </Navigator>
   )

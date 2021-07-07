@@ -19,7 +19,7 @@ export function Tool({
   ...rest
 }: Props) {
 
-  const { selection, fake_background } = theme.colors
+  const { selection, fake_background, background, purple, green } = theme.colors
 
   return (
     <RectButton {...rest}>
