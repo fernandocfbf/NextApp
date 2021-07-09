@@ -4,8 +4,8 @@ import {
   Text,
   Image,
   View,
-  FlatList
 } from "react-native";
+import { useState, useEffect } from "react";
 
 import avatarPng from "../../../assets/golab.png"
 import { Background } from "../../components/Background";
@@ -13,8 +13,10 @@ import { HomeDescription } from "../../components/HomeDescription";
 
 import { styles } from "./styles";
 import { ToolSelect } from '../../components/ToolSelect'
+import { theme } from "../../global/styles/theme";
 
 export function Home() {
+  const [dataNumber, setDataNumber] = useState([]);
 
   return (
     <Background>
@@ -24,16 +26,19 @@ export function Home() {
             <Text style={styles.helloText}>
               Hello, Sibs!
             </Text>
-            <Text style={styles.automateText}>
-              Let's automate some stuffs
-            </Text>
           </View>
           <Image
             style={styles.avatar}
             source={avatarPng}
           />
         </View>
-        <HomeDescription></HomeDescription>
+        <HomeDescription 
+          title={"Get Started"}
+          descripition={"Here you can use our tools \nto automate your routine"}
+          underline={theme.colors.green}
+          primary={theme.colors.green}
+          secondary={theme.colors.currentLine}
+        />
         <ToolSelect></ToolSelect>
       </SafeAreaView>
     </Background>

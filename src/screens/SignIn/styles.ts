@@ -8,11 +8,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center'
   },
   image: {
-    width: 220,
-    height: 220
+    width: 200,
+    height: 200
   },
   welcome: {
     fontSize: 34,
+    fontFamily: theme.fonts.title500,
     color: theme.colors.white,
     marginTop: 25
   },
@@ -34,6 +35,7 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     color: theme.colors.white,
     fontSize: 18,
+    fontFamily: theme.fonts.title500
   },
   register: {
     width: "70%",
@@ -41,17 +43,21 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.currentLine,
     height: 50,
     borderRadius: 8,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    
+
   },
   registerText: {
     alignSelf: 'center',
     color: theme.colors.white,
     fontSize: 18,
+    fontFamily: theme.fonts.title500
   },
   newUser: {
     marginTop: 10,
     width: '70%',
-    color: theme.colors.gray
+    color: theme.colors.gray,
+    fontFamily: theme.fonts.text400
   }
 
 

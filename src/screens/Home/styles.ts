@@ -15,11 +15,8 @@ export const styles = StyleSheet.create({
   },
   helloText:{
     fontSize: 35,
+    fontFamily: theme.fonts.title500,
     color: theme.colors.white
-  },
-  automateText: {
-    fontSize: 20,
-    color: theme.colors.white,
   },
   avatar: {
     width: 60,

@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     borderColor: theme.colors.purple,
     marginTop: 30,
     padding: 15,
+    fontFamily: theme.fonts.text400
   },
   
 })

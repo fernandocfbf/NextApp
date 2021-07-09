@@ -6,7 +6,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 
 export const categories = [
-  { id: '1', title: 'Artificial Intelligence', screen: "ArtificialIntelligence" },
+  { id: '1', title: 'NLP', screen: "ArtificialIntelligence" },
   { id: '2', title: 'Web Scraping', screen: "WebScraping"},
   { id: '3', title: 'Data Analysis', screen: "DataAnalysis" },
 ]

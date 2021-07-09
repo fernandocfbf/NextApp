@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 24,
     marginTop: 35,
     height: 150,
-    borderRadius: 15,
+    borderRadius: 8,
   },
   content: {
     width: "100%",
@@ -14,20 +14,20 @@ export const styles = StyleSheet.create({
   },
 
   title:{
-    width: 134,
+    width: 150,
     fontSize: 25,
+    fontFamily: theme.fonts.title500,
     color: theme.colors.white,
     marginLeft: 24,
     marginTop: 24,
     marginBottom: 15,
     borderBottomWidth: 2,
-    borderBottomColor: theme.colors.green,
-    fontWeight: 'bold'
   },
 
   text:{
     fontSize: 16,
     color: theme.colors.white,
-    marginLeft: 24
+    marginLeft: 24,
+    fontFamily: theme.fonts.text500,
   }
 })

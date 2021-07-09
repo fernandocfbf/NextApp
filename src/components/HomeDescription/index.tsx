@@ -6,9 +6,15 @@ import { Background } from "../../components/Background";
 import { theme } from "../../global/styles/theme";
 import { styles } from './styles'
 
-export function HomeDescription() {
+type Props = {
+  title: string;
+  descripition: string;
+  underline: string;
+  primary: string;
+  secondary: string
+}
 
-  const { selection, fake_background, purple } = theme.colors
+export function HomeDescription({ title, descripition, underline, primary, secondary }: Props) {
 
   return (
     <TouchableOpacity
@@ -16,19 +22,17 @@ export function HomeDescription() {
     >
       <LinearGradient
         style={styles.container}
-        colors={[selection, fake_background]}>
+        colors={[primary, secondary]}>
         <View style={styles.content}>
-          <Text style={styles.title}>
-            Get Started
+          <Text style={[styles.title, {borderBottomColor: underline}]}>
+            {title}
           </Text>
 
           <Text style={styles.text}>
-            Here you can use our tools {'\n'}
-            to automate your routine.
+            {descripition}
           </Text>
         </View>
       </LinearGradient>
-
     </TouchableOpacity>
 
   )
