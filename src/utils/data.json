@@ -1,0 +1,315 @@
+{
+  "encoding": "UTF-8",
+  "feed": Object {
+    "author": Array [
+      Object {
+        "email": Object {
+          "$t": "sibsmetricis@gmail.com",
+        },
+        "name": Object {
+          "$t": "sibsmetricis",
+        },
+      },
+    ],
+    "category": Array [
+      Object {
+        "scheme": "http://schemas.google.com/spreadsheets/2006",
+        "term": "http://schemas.google.com/spreadsheets/2006#list",
+      },
+    ],
+    "entry": Array [
+      Object {
+        "category": Array [
+          Object {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list",
+          },
+        ],
+        "content": Object {
+          "$t": "empresa: Social Finance, telefone: 44 20 3963 5176, idcontratos: 303",
+          "type": "text",
+        },
+        "gsx$e-mail": Object {
+          "$t": "",
+        },
+        "gsx$empresa": Object {
+          "$t": "Social Finance",
+        },
+        "gsx$idcontratos": Object {
+          "$t": "303",
+        },
+        "gsx$linkedin": Object {
+          "$t": "",
+        },
+        "gsx$nomedapessoa": Object {
+          "$t": "Dominique Carrie",
+        },
+        "gsx$país": Object {
+          "$t": "",
+        },
+        "gsx$telefone": Object {
+          "$t": "44 20 3963 5176",
+        },
+        "id": Object {
+          "$t": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/cokwr",
+        },
+        "link": Array [
+          Object {
+            "href": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/cokwr",
+            "rel": "self",
+            "type": "application/atom+xml",
+          },
+        ],
+        "title": Object {
+          "$t": "Dominique Carrie",
+          "type": "text",
+        },
+        "updated": Object {
+          "$t": "2021-07-10T14:34:26.281Z",
+        },
+      },
+      Object {
+        "category": Array [
+          Object {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list",
+          },
+        ],
+        "content": Object {
+          "$t": "empresa: Venlo (município), país: Holanda, e-mail: e.vogels@venlo.nl, telefone: 06-15031783, idcontratos: 133",
+          "type": "text",
+        },
+        "gsx$e-mail": Object {
+          "$t": "e.vogels@venlo.nl",
+        },
+        "gsx$empresa": Object {
+          "$t": "Venlo (município)",
+        },
+        "gsx$idcontratos": Object {
+          "$t": "133",
+        },
+        "gsx$linkedin": Object {
+          "$t": "",
+        },
+        "gsx$nomedapessoa": Object {
+",        "$t": "Eveline Vogels
+        },
+        "gsx$país": Object {
+          "$t": "Holanda",
+        },
+        "gsx$telefone": Object {
+          "$t": "06-15031783",
+        },
+        "id": Object {
+          "$t": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/cpzh4",
+        },
+        "link": Array [
+          Object {
+            "href": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/cpzh4",
+            "rel": "self",
+            "type": "application/atom+xml",
+          },
+        ],
+        "title": Object {
+",        "$t": "Eveline Vogels
+          "type": "text",
+        },
+        "updated": Object {
+          "$t": "2021-07-10T14:34:26.281Z",
+        },
+      },
+      Object {
+        "category": Array [
+          Object {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list",
+          },
+        ],
+        "content": Object {
+          "$t": "empresa: BNP Paribas, país: EUA, e-mail: Keely.gispan@us.bnpparibas.com, telefone: 1 332 323 3705, idcontratos: 290",
+          "type": "text",
+        },
+        "gsx$e-mail": Object {
+          "$t": "Keely.gispan@us.bnpparibas.com",
+        },
+        "gsx$empresa": Object {
+          "$t": "BNP Paribas",
+        },
+        "gsx$idcontratos": Object {
+          "$t": "290",
+        },
+        "gsx$linkedin": Object {
+          "$t": "",
+        },
+        "gsx$nomedapessoa": Object {
+          "$t": "Keely Gispan",
+        },
+        "gsx$país": Object {
+          "$t": "EUA",
+        },
+        "gsx$telefone": Object {
+          "$t": "1 332 323 3705",
+        },
+        "id": Object {
+          "$t": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/cre1l",
+        },
+        "link": Array [
+          Object {
+            "href": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/cre1l",
+            "rel": "self",
+            "type": "application/atom+xml",
+          },
+        ],
+        "title": Object {
+          "$t": "Keely Gispan",
+          "type": "text",
+        },
+        "updated": Object {
+          "$t": "2021-07-10T14:34:26.281Z",
+        },
+      },
+      Object {
+        "category": Array [
+          Object {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list",
+          },
+        ],
+        "content": Object {
+          "$t": "empresa: BNP Paribas, país: EUA, e-mail: guild.taylor@us.bnpparibas.com, telefone: 1 332 323 3704, idcontratos: 290",
+          "type": "text",
+        },
+        "gsx$e-mail": Object {
+          "$t": "guild.taylor@us.bnpparibas.com",
+        },
+        "gsx$empresa": Object {
+          "$t": "BNP Paribas",
+        },
+        "gsx$idcontratos": Object {
+          "$t": "290",
+        },
+        "gsx$linkedin": Object {
+          "$t": "",
+        },
+        "gsx$nomedapessoa": Object {
+          "$t": "Guy Taylor",
+        },
+        "gsx$país": Object {
+          "$t": "EUA",
+        },
+        "gsx$telefone": Object {
+          "$t": "1 332 323 3704",
+        },
+        "id": Object {
+          "$t": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/chk2m",
+        },
+        "link": Array [
+          Object {
+            "href": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/chk2m",
+            "rel": "self",
+            "type": "application/atom+xml",
+          },
+        ],
+        "title": Object {
+          "$t": "Guy Taylor",
+          "type": "text",
+        },
+        "updated": Object {
+          "$t": "2021-07-10T14:34:26.281Z",
+        },
+      },
+      Object {
+        "category": Array [
+          Object {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list",
+          },
+        ],
+        "content": Object {
+          "$t": "empresa: VDAB, país: Belgica, idcontratos: 305, linkedin: https://www.linkedin.com/in/iandewae/?originalSubdomain=be",
+          "type": "text",
+        },
+        "gsx$e-mail": Object {
+          "$t": "",
+        },
+        "gsx$empresa": Object {
+          "$t": "VDAB",
+        },
+        "gsx$idcontratos": Object {
+          "$t": "305",
+        },
+        "gsx$linkedin": Object {
+          "$t": "https://www.linkedin.com/in/iandewae/?originalSubdomain=be",
+        },
+        "gsx$nomedapessoa": Object {
+          "$t": "Ian Dewae",
+        },
+        "gsx$país": Object {
+          "$t": "Belgica",
+        },
+        "gsx$telefone": Object {
+          "$t": "",
+        },
+        "id": Object {
+          "$t": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/ciyn3",
+        },
+        "link": Array [
+          Object {
+            "href": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values/ciyn3",
+            "rel": "self",
+            "type": "application/atom+xml",
+          },
+        ],
+        "title": Object {
+          "$t": "Ian Dewae",
+          "type": "text",
+        },
+        "updated": Object {
+          "$t": "2021-07-10T14:34:26.281Z",
+        },
+      },
+    ],
+    "id": Object {
+      "$t": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values",
+    },
+    "link": Array [
+      Object {
+        "href": "https://docs.google.com/spreadsheets/d/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/pubhtml",
+        "rel": "alternate",
+        "type": "application/atom+xml",
+      },
+      Object {
+        "href": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values",
+        "rel": "http://schemas.google.com/g/2005#feed",
+        "type": "application/atom+xml",
+      },
+      Object {
+        "href": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values",
+        "rel": "http://schemas.google.com/g/2005#post",
+        "type": "application/atom+xml",
+      },
+      Object {
+        "href": "https://spreadsheets.google.com/feeds/list/1IvanSiCJaa6bA7khArYvxA1kSk5ss09ZPwEDwpVdrvE/od6/public/values?alt=json",
+        "rel": "self",
+        "type": "application/atom+xml",
+      },
+    ],
+    "openSearch$startIndex": Object {
+      "$t": "1",
+    },
+    "openSearch$totalResults": Object {
+      "$t": "5",
+    },
+    "title": Object {
+      "$t": "Página1",
+      "type": "text",
+    },
+    "updated": Object {
+      "$t": "2021-07-10T14:34:26.281Z",
+    },
+    "xmlns": "http://www.w3.org/2005/Atom",
+    "xmlns$gsx": "http://schemas.google.com/spreadsheets/2006/extended",
+    "xmlns$openSearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+  },
+  "version": "1.0",
+}

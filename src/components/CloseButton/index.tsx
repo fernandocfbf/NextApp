@@ -20,7 +20,7 @@ export function CloseButton({ ...rest }: RectButtonProps) {
       onPress={() => handleCloseButton()}
     >
       <MaterialCommunityIcons
-        name="close"
+        name="keyboard-backspace"
         color={theme.colors.white}
         size={24}
       >

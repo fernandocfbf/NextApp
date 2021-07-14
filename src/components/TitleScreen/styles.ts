@@ -14,8 +14,10 @@ export const styles = StyleSheet.create({
   },
   title:{
     fontSize: 25,
+    fontFamily: theme.fonts.title700,
     color: theme.colors.white,
     borderBottomWidth: 2,
     borderBottomColor: theme.colors.purple,
+
   }
 })

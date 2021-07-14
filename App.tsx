@@ -7,6 +7,7 @@ import AppLoading from 'expo-app-loading'
 
 import { Routes } from './src/routes'
 import { Background } from './src/components/Background'
+import { ListHeaderContextProvider } from './src/contexts/listHeaderContext'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,14 +23,16 @@ export default function App() {
   }
 
   return (
-    <Background>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      >
-      </StatusBar>
-      <Routes />
-    </Background>
+    <ListHeaderContextProvider>
+      <Background>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        >
+        </StatusBar>
+        <Routes />
+      </Background>
+    </ListHeaderContextProvider>
   )
 }
