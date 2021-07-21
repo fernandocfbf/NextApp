@@ -8,6 +8,7 @@ import AppLoading from 'expo-app-loading'
 import { Routes } from './src/routes'
 import { Background } from './src/components/Background'
 import { ListHeaderContextProvider } from './src/contexts/listHeaderContext'
+import { MultiStateButtonContextProvider } from './src/contexts/multiStateButtonContext'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -23,16 +24,18 @@ export default function App() {
   }
 
   return (
-    <ListHeaderContextProvider>
-      <Background>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="transparent"
-          translucent
-        >
-        </StatusBar>
-        <Routes />
-      </Background>
-    </ListHeaderContextProvider>
+    <MultiStateButtonContextProvider>
+      <ListHeaderContextProvider>
+        <Background>
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor="transparent"
+            translucent
+          >
+          </StatusBar>
+          <Routes />
+        </Background>
+      </ListHeaderContextProvider>
+    </MultiStateButtonContextProvider>
   )
 }

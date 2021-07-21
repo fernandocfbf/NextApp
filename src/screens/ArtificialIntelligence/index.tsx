@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { View, Text, FlatList, SafeAreaView, ScrollView } from "react-native";
 import { RectButton } from 'react-native-gesture-handler'
+import { showMessage, hideMessage } from "react-native-flash-message";
 
 import { Background } from "../../components/Background";
 import { HomeDescription } from "../../components/HomeDescription";
@@ -9,6 +10,7 @@ import { TitleScreen } from "../../components/TitleScreen";
 import { ListDivider } from "../../components/ListDivider";
 import { ListHeader } from "../../components/ListHeader";
 import { ListItem } from "../../components/ListItem";
+import { MultiStateButton } from "../../components/MultiStateButton";
 import { styles } from './styles'
 import { theme } from "../../global/styles/theme";
 import { EmptyList } from "../../components/EmptyList";
@@ -19,7 +21,31 @@ import { useListHeader } from "../../contexts/listHeaderContext";
 export function ArtificialIntelligence() {
 
   const [download, setDownload] = useState(false)
-  const { data, dataClassified } = useListHeader()
+  const { data, dataClassified, loading } = useListHeader()
+
+  function handleDonwload(dataToDownload: Array<any>) {
+    if (dataToDownload.length > 0) {
+      console.log("Ah", dataToDownload.length)
+
+      showMessage({
+        message: "Simple message",
+        type: 'danger',
+      });
+    } else {
+      showMessage({
+        message: "Simple message",
+        type: "info",
+      });
+    }
+  }
+
+  useEffect(() => {
+    console.log(dataClassified, dataClassified.length)
+    if (dataClassified.length > 0 && loading === false) {
+      console.log("Able to download")
+      setDownload(true)
+    }
+  }, [dataClassified, loading])
 
   return (
     <Background>
@@ -36,13 +62,14 @@ export function ArtificialIntelligence() {
 
           <View style={styles.content}>
             <View style={styles.table}>
+              <MultiStateButton />
               <ListHeader
                 title={"Data to analyze"}
                 subtitle={"Get Data"}
               ></ListHeader>
               {data.length > 0 ?
                 <FlatList
-                  data={data}
+                  data={data.slice(0, 3)}
                   keyExtractor={item => item.id}
                   renderItem={({ item }) => (
                     <ListItem
@@ -65,7 +92,7 @@ export function ArtificialIntelligence() {
                 style={[styles.download, {
                   backgroundColor: download ? theme.colors.green : theme.colors.gray
                 }]}
-                onPress={() => console.log()}
+                onPress={() => handleDonwload(dataClassified)}
               >
                 <Text style={styles.downloadText}>
                   Download
