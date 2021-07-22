@@ -8,6 +8,7 @@ import AppLoading from 'expo-app-loading'
 import { Routes } from './src/routes'
 import { Background } from './src/components/Background'
 import { ListHeaderContextProvider } from './src/contexts/listHeaderContext'
+import { ListHeaderWebContextProvider } from './src/contexts/listHeaderWebContext'
 import { MultiStateButtonContextProvider } from './src/contexts/multiStateButtonContext'
 
 export default function App() {
@@ -25,17 +26,19 @@ export default function App() {
 
   return (
     <MultiStateButtonContextProvider>
-      <ListHeaderContextProvider>
-        <Background>
-          <StatusBar
-            barStyle="light-content"
-            backgroundColor="transparent"
-            translucent
-          >
-          </StatusBar>
-          <Routes />
-        </Background>
-      </ListHeaderContextProvider>
+      <ListHeaderWebContextProvider>
+        <ListHeaderContextProvider>
+          <Background>
+            <StatusBar
+              barStyle="light-content"
+              backgroundColor="transparent"
+              translucent
+            >
+            </StatusBar>
+            <Routes />
+          </Background>
+        </ListHeaderContextProvider>
+      </ListHeaderWebContextProvider>
     </MultiStateButtonContextProvider>
   )
 }

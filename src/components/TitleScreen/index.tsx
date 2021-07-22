@@ -4,12 +4,16 @@ import { styles } from "./styles";
 
 import { CloseButton } from "../CloseButton";
 
-export function TitleScreen() {
+type Props = {
+  title: string
+}
+
+export function TitleScreen({ title }: Props) {
   return (
     <View>
       <View style={styles.header}>
         <Text style={styles.title}>
-          NLP
+          {title}
         </Text>
         <CloseButton></CloseButton>
       </View>

@@ -40,9 +40,7 @@ export function ArtificialIntelligence() {
   }
 
   useEffect(() => {
-    console.log(dataClassified, dataClassified.length)
     if (dataClassified.length > 0 && loading === false) {
-      console.log("Able to download")
       setDownload(true)
     }
   }, [dataClassified, loading])
@@ -51,7 +49,9 @@ export function ArtificialIntelligence() {
     <Background>
       <ScrollView>
         <SafeAreaView>
-          <TitleScreen />
+          <TitleScreen 
+            title={'NLP'}
+          />
           <HomeDescription
             title={"Our Algorithm"}
             descripition={"Automate your email filter"}

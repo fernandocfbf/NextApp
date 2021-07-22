@@ -36,8 +36,6 @@ export function ListItem({ from, date, resume }: Props) {
           {date}
         </Text>
       </View>
-
-
     </View>
   )
 }

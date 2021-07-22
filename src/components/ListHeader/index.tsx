@@ -1,7 +1,6 @@
 import React, { ReactNode, useState } from 'react'
 import { View, Text, ActivityIndicator } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
-import axios from "axios";
 
 import api from '../../services/api';
 import { styles } from './styles'
@@ -18,7 +17,7 @@ type Props = {
 
 export function ListHeader({ title, subtitle }: Props) {
 
-  const { data, handleGetData, loading, handleGetDataClassified, handleLoading } = useListHeader()
+  const { data, dataClassified, handleGetData, loading, handleGetDataClassified, handleLoading } = useListHeader()
   const { selected } = useMultiStateButton()
 
   async function process(data: Array<any>) {
@@ -38,7 +37,8 @@ export function ListHeader({ title, subtitle }: Props) {
         .then(resp => {
           if (Math.floor(resp.status / 100) === 2) {
             if (resp.data != false) {
-              new_data = new_data.concat(eval('(' + resp.data + ')'))
+
+              new_data = dataClassified.concat(eval('(' + resp.data + ')'))
               handleGetDataClassified(new_data)
             }
           }
@@ -59,6 +59,10 @@ export function ListHeader({ title, subtitle }: Props) {
     })
     handleLoading(false)
   }
+
+  useEffect(() => {
+    handleGetData([])
+  }, [selected])
 
   return (
     <View style={styles.container}>
