@@ -49,7 +49,7 @@ export function ArtificialIntelligence() {
     <Background>
       <ScrollView>
         <SafeAreaView>
-          <TitleScreen 
+          <TitleScreen
             title={'NLP'}
           />
           <HomeDescription
@@ -68,18 +68,16 @@ export function ArtificialIntelligence() {
                 subtitle={"Get Data"}
               ></ListHeader>
               {data.length > 0 ?
-                <FlatList
-                  data={data.slice(0, 3)}
-                  keyExtractor={(item, index) => item.id}
-                  renderItem={({ item }) => (
+                data.slice(0, 3).map(item => (
+                  <>
                     <ListItem
+                      key={item.id}
                       from={item.de}
                       date={item.data}
                     />
-                  )}
-                  ItemSeparatorComponent={() => <ListDivider />}
-                  showsVerticalScrollIndicator={false}
-                />
+                    <ListDivider />
+                  </>
+                ))
                 :
                 <EmptyList />
               }

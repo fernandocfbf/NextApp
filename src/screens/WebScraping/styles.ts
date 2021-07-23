@@ -16,5 +16,18 @@ export const styles = StyleSheet.create({
     },
     flatList: {
         height: 180,
-    }
+    },
+    download: {
+        marginTop: 24,
+        width: "100%",
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 8
+    },
+    downloadText: {
+        color: theme.colors.white,
+        fontFamily: theme.fonts.text500,
+        fontSize: 16
+    },
 })

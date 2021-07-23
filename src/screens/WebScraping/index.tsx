@@ -1,26 +1,30 @@
 import React from "react";
-import { View, Text, SafeAreaView, ScrollView, FlatList } from "react-native";
+import { View, Text, SafeAreaView, ScrollView } from "react-native";
 
 import { institutions } from "./config";
 import { Background } from "../../components/Background";
 import { HomeDescription } from "../../components/HomeDescription";
 import { TitleScreen } from "../../components/TitleScreen";
-import { ListDivider } from "../../components/ListDivider";
+import { RectButton } from 'react-native-gesture-handler'
 import { ListHeaderWeb } from "../../components/ListHeaderWeb";
 import { InstitutionBox } from "../../components/InstitutionBox";
 import { styles } from './styles'
 import { theme } from "../../global/styles/theme";
 import { useListSelectedInstitutions } from "../../contexts/selectedInstitutionsContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export function WebScraping() {
-    const { data, handleSelectInstitution, handleClear } = useListSelectedInstitutions()
+    const [download, setDownload] = useState(false)
+    const { handleClear } = useListSelectedInstitutions()
+
     useEffect(() => {
         handleClear()
     }, [])
+
     return (
         <Background>
-            <ScrollView>
+            <ScrollView
+            >
                 <SafeAreaView>
                     <TitleScreen
                         title={'WEB SCRAPING'}
@@ -39,6 +43,7 @@ export function WebScraping() {
                                 subtitle={'Search'}
                             />
                             <ScrollView
+                                nestedScrollEnabled={true}
                                 style={styles.flatList}
                             >
                                 {
@@ -52,6 +57,16 @@ export function WebScraping() {
                                     ))
                                 }
                             </ScrollView>
+                            <RectButton
+                                style={[styles.download, {
+                                    backgroundColor: download ? theme.colors.green : theme.colors.gray
+                                }]}
+
+                            >
+                                <Text style={styles.downloadText}>
+                                    Download
+                                </Text>
+                            </RectButton>
                         </View>
                     </View>
                 </SafeAreaView>

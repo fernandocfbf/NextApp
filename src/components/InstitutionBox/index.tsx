@@ -31,7 +31,7 @@ export function InstitutionBox({ id, institution, dataBaseSize }: Props) {
     <TouchableOpacity
       activeOpacity={0.6}
       style={[styles.container, {
-        backgroundColor: selected ? theme.colors.green : theme.colors.selection
+        borderColor: selected ? theme.colors.green : theme.colors.selection
       }]}
       onPress={() => handlePress()}
       >

@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     padding: 3,
     marginVertical: 3,
     borderRadius: 8,
+    borderWidth: 2
   },
   generalInfo:{
     marginLeft: 5
