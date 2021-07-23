@@ -14,4 +14,7 @@ export const styles = StyleSheet.create({
         padding: 5,
         borderRadius: 8,
     },
+    flatList: {
+        height: 180,
+    }
 })

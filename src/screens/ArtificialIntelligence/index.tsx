@@ -70,11 +70,10 @@ export function ArtificialIntelligence() {
               {data.length > 0 ?
                 <FlatList
                   data={data.slice(0, 3)}
-                  keyExtractor={item => item.id}
+                  keyExtractor={(item, index) => item.id}
                   renderItem={({ item }) => (
                     <ListItem
                       from={item.de}
-                      resume={"Qualquer coisa"}
                       date={item.data}
                     />
                   )}

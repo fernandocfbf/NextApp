@@ -1,28 +1,38 @@
 import React, { ReactNode } from "react";
-import { View, Text } from 'react-native'
-import { RectButton, RectButtonProperties } from "react-native-gesture-handler";
+import { TouchableOpacity, Text } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
+import { useNavigation } from '@react-navigation/native'
+
 
 
 import { styles } from "./styles";
 import { theme } from '../../global/styles/theme'
 
 
-type Props = RectButtonProperties & {
+type Props = {
   title: string;
   icon: ReactNode;
+  screen: string
 }
 
 export function Tool({
   title,
   icon,
-  ...rest
+  screen
 }: Props) {
+  const navigation = useNavigation()
 
-  const { selection, fake_background, background, purple, green } = theme.colors
+  function handleToolClick(screen: string) {
+    navigation.navigate(screen)
+  }
+
+  const { selection, fake_background } = theme.colors
 
   return (
-    <RectButton {...rest}>
+    <TouchableOpacity
+      activeOpacity={0.6}
+      onPress={() => handleToolClick(screen)}
+    >
       <LinearGradient
         style={styles.container}
         colors={[selection, fake_background]}>
@@ -32,6 +42,6 @@ export function Tool({
         </Text>
 
       </LinearGradient>
-    </RectButton>
+    </TouchableOpacity>
   )
 }

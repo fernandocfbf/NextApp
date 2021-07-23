@@ -10,8 +10,14 @@ import { ListHeaderWeb } from "../../components/ListHeaderWeb";
 import { InstitutionBox } from "../../components/InstitutionBox";
 import { styles } from './styles'
 import { theme } from "../../global/styles/theme";
+import { useListSelectedInstitutions } from "../../contexts/selectedInstitutionsContext";
+import { useEffect } from "react";
 
 export function WebScraping() {
+    const { data, handleSelectInstitution, handleClear } = useListSelectedInstitutions()
+    useEffect(() => {
+        handleClear()
+    }, [])
     return (
         <Background>
             <ScrollView>
@@ -32,21 +38,21 @@ export function WebScraping() {
                                 title={'Institutions'}
                                 subtitle={'Search'}
                             />
-                            <FlatList
-                                data={institutions}
-                                keyExtractor={item => item.id}
-                                renderItem={({ item }) => (
-                                    <InstitutionBox
-                                        institution={item.institution}
-                                        dataBaseSize={item.dataBaseSize}
-                                        selected={false}
-                                    />
-                                )}
-                                showsVerticalScrollIndicator={false}
-                            />
-
+                            <ScrollView
+                                style={styles.flatList}
+                            >
+                                {
+                                    institutions.map(item => (
+                                        <InstitutionBox
+                                            key={item.id}
+                                            id={item.id}
+                                            institution={item.institution}
+                                            dataBaseSize={item.dataBaseSize}
+                                        />
+                                    ))
+                                }
+                            </ScrollView>
                         </View>
-
                     </View>
                 </SafeAreaView>
             </ScrollView>

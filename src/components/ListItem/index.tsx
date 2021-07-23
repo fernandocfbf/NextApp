@@ -8,10 +8,9 @@ import { theme } from '../../global/styles/theme'
 type Props = {
   from: string;
   date: string;
-  resume: string;
 }
 
-export function ListItem({ from, date, resume }: Props) {
+export function ListItem({ from, date }: Props) {
 
   function handleFromEmail(email: string){
     const cutStringIndex = email.indexOf("@")

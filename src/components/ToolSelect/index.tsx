@@ -1,6 +1,5 @@
 import React from "react";
 import { View, ScrollView } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
@@ -11,11 +10,6 @@ import { categories } from "../../utils/tools";
 import { theme } from "../../global/styles/theme";
 
 export function ToolSelect() {
-  const navigation = useNavigation()
-
-  function handleToolClick(screen: string) {
-    navigation.navigate(screen)
-  }
 
   function handleIcon(screen: string) {
     if (screen === "ArtificialIntelligence") {
@@ -45,7 +39,7 @@ export function ToolSelect() {
             icon={
               handleIcon(tool.screen)
             }
-            onPress={() => handleToolClick(tool.screen)}
+            screen={tool.screen}
           ></Tool>
         ))
       }

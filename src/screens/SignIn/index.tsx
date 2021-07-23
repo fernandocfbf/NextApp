@@ -17,6 +17,7 @@ export function SignIn() {
 
   return (
     <Background>
+      <ScrollView>
         <SafeAreaView style={styles.container}>
           <Image
             style={styles.image}
@@ -58,6 +59,7 @@ export function SignIn() {
             Dont't have the password? Please ask your superiors
           </Text>
         </SafeAreaView>
+      </ScrollView>
     </Background>
   )
 }

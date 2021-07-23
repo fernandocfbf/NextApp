@@ -10,6 +10,7 @@ import { Background } from './src/components/Background'
 import { ListHeaderContextProvider } from './src/contexts/listHeaderContext'
 import { ListHeaderWebContextProvider } from './src/contexts/listHeaderWebContext'
 import { MultiStateButtonContextProvider } from './src/contexts/multiStateButtonContext'
+import { ListSelectedInstitutionsContextProvider } from './src/contexts/selectedInstitutionsContext'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,20 +26,22 @@ export default function App() {
   }
 
   return (
-    <MultiStateButtonContextProvider>
-      <ListHeaderWebContextProvider>
-        <ListHeaderContextProvider>
-          <Background>
-            <StatusBar
-              barStyle="light-content"
-              backgroundColor="transparent"
-              translucent
-            >
-            </StatusBar>
-            <Routes />
-          </Background>
-        </ListHeaderContextProvider>
-      </ListHeaderWebContextProvider>
-    </MultiStateButtonContextProvider>
+    <ListSelectedInstitutionsContextProvider>
+      <MultiStateButtonContextProvider>
+        <ListHeaderWebContextProvider>
+          <ListHeaderContextProvider>
+            <Background>
+              <StatusBar
+                barStyle="light-content"
+                backgroundColor="transparent"
+                translucent
+              >
+              </StatusBar>
+              <Routes />
+            </Background>
+          </ListHeaderContextProvider>
+        </ListHeaderWebContextProvider>
+      </MultiStateButtonContextProvider>
+    </ListSelectedInstitutionsContextProvider>
   )
 }
