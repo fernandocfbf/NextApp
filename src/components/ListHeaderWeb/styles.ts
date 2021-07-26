@@ -8,6 +8,15 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginBottom: 15
   },
+  toggle: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  toggleText: {
+    fontFamily: theme.fonts.text400,
+    fontSize: 12
+  },
   title: {
     fontFamily: theme.fonts.title700,
     color: theme.colors.white,
