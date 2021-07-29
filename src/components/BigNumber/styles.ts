@@ -3,7 +3,7 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     container:{
-        width: '30%',
+        width: '32%',
         justifyContent: 'center',
         alignItems: 'center',
         borderBottomColor: theme.colors.cyan,
