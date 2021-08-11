@@ -17,8 +17,8 @@ export function SignIn() {
 
   return (
     <Background>
-      <ScrollView>
-        <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
+        <SafeAreaView style={styles.content}>
           <Image
             style={styles.image}
             source={logoPng}

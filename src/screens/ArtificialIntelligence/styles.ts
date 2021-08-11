@@ -4,8 +4,7 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
   content: {
     flex: 1,
-    justifyContent: 'center',
-    alignContent:'center',
+    justifyContent: 'flex-end',
   },
   table: {
     marginVertical: 30,

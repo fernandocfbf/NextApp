@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { View, Text, ScrollView, Image } from 'react-native'
+import { View, Text, ScrollView, Image, Dimensions, FlatList } from 'react-native';
 import MapView, { Marker, Circle } from "react-native-maps";
+
 
 import { countries_coordinates } from '../../utils/countries';
 import { BigNumber } from '../../components/BigNumber';
@@ -15,32 +16,39 @@ import ImagePNG_1 from '../../assets/mapMarker_1.png'
 import ImagePNG_2 from '../../assets/mapMarker_2.png'
 import ImagePNG_3 from '../../assets/mapMarker_3.png'
 import api from '../../services/api';
+import { Graph } from '../../components/Graph';
+import { graphs } from './config'
 
 
 
 export function DataAnalysis() {
     const [contries, setContries] = useState(Array)
     const [fields, setFields] = useState(Array)
+    const [years, setYears] = useState(Object)
     const [invested, setInvested] = useState(0)
     const [size, setSize] = useState(0)
     const [people, setPeople] = useState(0)
 
-    function handleNumbers(number: number, divide: number, sufix: string){
-        return (number/divide).toFixed(1).toString()+sufix
+    const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
+
+    function handleNumbers(number: number, divide: number, sufix: string) {
+        return (number / divide).toFixed(1).toString() + sufix
     }
 
     async function getData() {
         await api.get('/database').then(response => {
+            console.log(response.data)
             setContries(response.data.countries)
             setFields(response.data.fields)
             setSize(response.data.size)
             setPeople(response.data.peopleSum)
             setInvested(response.data.investedSum)
+            setYears(response.data.years)
         })
     }
 
     useEffect(() => {
-        if (contries.length === 0) {
+        if (contries == undefined || contries.length == 0) {
             console.log("Getting database info...")
             getData()
         }
@@ -59,14 +67,15 @@ export function DataAnalysis() {
 
                 >
                     {
-                        contries.length > 0
+                        contries != undefined
                             ?
-                            contries.map((country) => {
-                                if(country.sum >= 20) var image = ImagePNG_1
-                                else if(country.sum < 20 && country.sum >= 10) image = ImagePNG_2
-                                else if(country.sum < 10) image =  ImagePNG_3
+                            contries.map((country, index) => {
+                                if (country.sum >= 20) var image = ImagePNG_1
+                                else if (country.sum < 20 && country.sum >= 10) image = ImagePNG_2
+                                else if (country.sum < 10) image = ImagePNG_3
                                 return (
                                     <Marker
+                                        key={index}
                                         coordinate={{
                                             latitude: country.latitude,
                                             longitude: country.longitude,
@@ -79,10 +88,7 @@ export function DataAnalysis() {
                             null
                     }
                 </MapView>
-                <Text>
-                    
-                </Text>
-                <View style={styles.bigNumbers}>
+                <View style={[styles.bigNumbers]}>
                     <BigNumber
                         bigNumber={size.toString()}
                         description={'Contracts'}
@@ -97,6 +103,26 @@ export function DataAnalysis() {
                     />
                 </View>
 
+                <FlatList
+                    data={graphs}
+                    style={{
+                        flex: 1,
+                        marginTop: 24,
+                    }}
+                    renderItem={({ item }) => {
+                        return (
+                            <Graph
+                                key={item.id}
+                                graphType={item.type}
+                                title={item.title}
+                                data={years}
+                            ></Graph>
+                        )
+                    }}
+                    pagingEnabled
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                />
             </ScrollView>
         </Background>
 

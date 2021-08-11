@@ -5,16 +5,16 @@ export const styles = StyleSheet.create({
     content: {
         flex: 1,
     },
-    
+
     map: {
         flex: 1,
         height: 280,
         marginTop: 20
     },
-    bigNumbers:{
+    bigNumbers: {
         marginHorizontal: 24,
         marginTop: 20,
         flexDirection: 'row',
         justifyContent: 'space-between'
-    }
+    },
 })

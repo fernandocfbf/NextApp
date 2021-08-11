@@ -1,12 +1,20 @@
 import { StyleSheet } from "react-native";
+import { Background } from "../../components/Background";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
+  content: {
+    flex: 1,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   image: {
     width: 200,
     height: 200
